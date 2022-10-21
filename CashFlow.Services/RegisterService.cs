@@ -1,4 +1,5 @@
-﻿using CashFlow.MemoryDb.Entities;
+﻿using CashFlow.MemoryDb;
+using CashFlow.MemoryDb.Entities;
 using CashFlow.Services.Dtos;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,12 @@ namespace CashFlow.Services
 {
     public class RegisterService : IRegisterService
     {
+        private IRegisterDb _registerDb;
+        public RegisterService(IRegisterDb registerDb)
+
+        {
+            _registerDb = registerDb;
+        }
         public void AddRegister(Register register)
         {
             throw new NotImplementedException();
@@ -17,12 +24,17 @@ namespace CashFlow.Services
 
         public Register GetRegister(Guid id)
         {
-            throw new NotImplementedException();
+            var register = _registerDb.Registers().FirstOrDefault<Register>(r => r.Id == id);
+            if (register == null) return register;
+            return new Register();
         }
 
         public RegistersDto GetRegistersByDate(DateTime date)
         {
-            throw new NotImplementedException();
+            var registerDto = new RegistersDto();
+            registerDto.Registers = _registerDb.Registers().Where<Register>(r => r.CreatedAt.Date == date.Date);
+            registerDto.Total = _registerDb.Registers().Sum<Register>(r => r.Value);
+            return registerDto;
         }
 
         public void RemoveRegister(Guid id)
