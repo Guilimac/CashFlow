@@ -19,13 +19,13 @@ namespace CashFlow.Services
         }
         public void AddRegister(Register register)
         {
-            throw new NotImplementedException();
+            _registerDb.Registers().Concat(new[] { register });
         }
 
         public Register GetRegister(Guid id)
         {
             var register = _registerDb.Registers().FirstOrDefault<Register>(r => r.Id == id);
-            if (register == null) return register;
+            if (register != null) return register;
             return new Register();
         }
 

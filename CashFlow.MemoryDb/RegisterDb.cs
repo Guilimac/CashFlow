@@ -10,6 +10,7 @@ namespace CashFlow.MemoryDb
     public class RegisterDb : IRegisterDb
     {
         private IEnumerable<Register> _Registers;
+
         public IEnumerable<Register> Registers()
         {
             return _Registers;

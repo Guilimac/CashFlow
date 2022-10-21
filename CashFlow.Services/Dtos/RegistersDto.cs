@@ -9,7 +9,7 @@ namespace CashFlow.Services.Dtos
 {
     public class RegistersDto
     {
-        public IEnumerable<Register> Registers { get; set; }
+        public IEnumerable<Register>? Registers { get; set; }
         public float Total { get; set; }
     }
 }
