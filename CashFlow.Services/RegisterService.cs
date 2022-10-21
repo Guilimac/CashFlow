@@ -39,12 +39,13 @@ namespace CashFlow.Services
 
         public void RemoveRegister(Guid id)
         {
-            throw new NotImplementedException();
+            var registers = _registerDb.Registers().Where(r => r.Id == id).ToList<Register>();
+            registers.RemoveAll(r => r.Id == id);
         }
 
         public void UpdateRegister(Register register)
         {
-            throw new NotImplementedException();
+            _registerDb.Registers().Where(r=>r.Id == register.Id).ToList<Register>().Select(r => { r.Value = register.Value; r.Description = register.Description; r.UpdatedAt = DateTime.Now; return r; });
         }
     }
 }
