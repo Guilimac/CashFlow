@@ -1,8 +1,10 @@
 using CashFlow.MemoryDb;
 using CashFlow.MemoryDb.Entities;
 using CashFlow.Services;
+using CashFlow.Services.Dtos;
 using Microsoft.AspNetCore.DataProtection.XmlEncryption;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -53,6 +55,14 @@ app.MapGet("/registers",(IRegisterService registerService) =>
     ? Results.Ok(registers)
     : Results.NotFound())
     .WithName("GetRegister")
+    .Produces<Register>(StatusCodes.Status200OK)
+    .Produces(StatusCodes.Status404NotFound);
+app.MapGet("/registerByDate/{date}",(IRegisterService registerService, DateTime date)=>
+    registerService.GetRegistersByDate(date)
+    is RegistersDto registers
+    ? Results.Ok(registers)
+    : Results.NotFound())
+    .WithName("GetRegisterByDate")
     .Produces<Register>(StatusCodes.Status200OK)
     .Produces(StatusCodes.Status404NotFound);
 
