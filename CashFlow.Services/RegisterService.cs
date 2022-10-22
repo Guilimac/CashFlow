@@ -19,7 +19,10 @@ namespace CashFlow.Services
         }
         public void AddRegister(Register register)
         {
-            _registerDb.Registers().Concat(new[] { register });
+            var registers = _registerDb.Registers();
+            var listRegistes = registers.ToList<Register>();
+            listRegistes.Add(register);
+            _registerDb.setRegiters(listRegistes);
         }
 
         public Register GetRegister(Guid id)
@@ -46,6 +49,11 @@ namespace CashFlow.Services
         public void UpdateRegister(Register register)
         {
             _registerDb.Registers().Where(r=>r.Id == register.Id).ToList<Register>().Select(r => { r.Value = register.Value; r.Description = register.Description; r.UpdatedAt = DateTime.Now; return r; });
+        }
+
+        public IEnumerable<Register> GetAllRegisters()
+        {
+            return _registerDb.Registers();
         }
     }
 }

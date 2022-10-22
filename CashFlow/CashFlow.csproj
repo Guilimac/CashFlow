@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CashFlow.MemoryDb\CashFlow.MemoryDb.csproj" />
+    <ProjectReference Include="..\CashFlow.Services\CashFlow.Services.csproj" />
   </ItemGroup>
 
 </Project>

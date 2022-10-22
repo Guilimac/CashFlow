@@ -15,7 +15,7 @@ namespace CashFlow.Services
         public void AddRegister(Register register);
         public void RemoveRegister(Guid id);    
         public void UpdateRegister(Register register);
-
+        public IEnumerable<Register> GetAllRegisters();
 
     }
 }

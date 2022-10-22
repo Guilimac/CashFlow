@@ -10,5 +10,6 @@ namespace CashFlow.MemoryDb
     public interface IRegisterDb
     {
         public IEnumerable<Register> Registers();
+        public void setRegiters(List<Register> registers);
     }
 }
