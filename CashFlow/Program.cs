@@ -57,6 +57,7 @@ app.MapGet("/registers",(IRegisterService registerService) =>
     .WithName("GetRegister")
     .Produces<Register>(StatusCodes.Status200OK)
     .Produces(StatusCodes.Status404NotFound);
+
 app.MapGet("/registerByDate/{date}",(IRegisterService registerService, DateTime date)=>
     registerService.GetRegistersByDate(date)
     is RegistersDto registers
@@ -65,5 +66,25 @@ app.MapGet("/registerByDate/{date}",(IRegisterService registerService, DateTime 
     .WithName("GetRegisterByDate")
     .Produces<Register>(StatusCodes.Status200OK)
     .Produces(StatusCodes.Status404NotFound);
+
+app.MapPut("/register", (IRegisterService registerService, Register register) =>
+{
+    registerService.UpdateRegister(register);
+    return Results.NoContent();
+
+}).WithName("UpdateRegister")
+.ProducesValidationProblem()
+.Produces(StatusCodes.Status204NoContent)
+.Produces(StatusCodes.Status404NotFound);
+
+app.MapDelete("/register/{id}", (IRegisterService registerService, Guid id) =>
+{
+    var registerDelete = registerService.GetRegister(id);
+    registerService.RemoveRegister(id);
+    return Results.Ok(id);
+}).WithName("DeleteRegister")
+.ProducesValidationProblem()
+.Produces(StatusCodes.Status200OK)
+.Produces(StatusCodes.Status404NotFound);
 
 app.Run();
