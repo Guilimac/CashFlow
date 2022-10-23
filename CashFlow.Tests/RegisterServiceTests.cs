@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CashFlow.Tests.Shared
+namespace CashFlow.Tests.Unit
 {
-    public interface IBuilder<T>
+    internal class RegisterServiceTests
     {
-        public T Instance { get; }
     }
 }

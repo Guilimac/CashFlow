@@ -23,7 +23,7 @@ namespace CashFlow.Services
             var listRegistes = registers.ToList<Register>();
             register.Id = Guid.NewGuid();
             listRegistes.Add(register);
-            _registerDb.setRegiters(listRegistes);
+            _registerDb.SetRegiters(listRegistes);
         }
 
         public Register GetRegister(Guid id)
@@ -45,7 +45,7 @@ namespace CashFlow.Services
         {
             var listRegistes = _registerDb.Registers().ToList();
             listRegistes.RemoveAll(r => r.Id == id);
-            _registerDb.setRegiters(listRegistes);
+            _registerDb.SetRegiters(listRegistes);
         }
 
         public void UpdateRegister(Register register)

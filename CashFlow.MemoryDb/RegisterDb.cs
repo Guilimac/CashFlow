@@ -20,7 +20,7 @@ namespace CashFlow.MemoryDb
             return _Registers;
         }
 
-        public void setRegiters(List<Register> registers)
+        public void SetRegiters(List<Register> registers)
         {
             _Registers = registers;
         }
