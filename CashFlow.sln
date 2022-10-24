@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow", "CashFlow\CashFlow.csproj", "{6EE8DD57-DB94-46F6-A45E-42D5B3325C14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashFlow", "CashFlow\CashFlow.csproj", "{6EE8DD57-DB94-46F6-A45E-42D5B3325C14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.MemoryDb", "CashFlow.MemoryDb\CashFlow.MemoryDb.csproj", "{157E5BC4-F2DA-449E-A57E-1619E1AC4134}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashFlow.MemoryDb", "CashFlow.MemoryDb\CashFlow.MemoryDb.csproj", "{157E5BC4-F2DA-449E-A57E-1619E1AC4134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Services", "CashFlow.Services\CashFlow.Services.csproj", "{BBA7F275-349B-4793-97B6-E346E5DA7F61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashFlow.Services", "CashFlow.Services\CashFlow.Services.csproj", "{BBA7F275-349B-4793-97B6-E346E5DA7F61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Tests.Unit", "CashFlow.Tests\CashFlow.Tests.Unit.csproj", "{FF87DBDB-86F9-47AB-95D4-EA505EBED5B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashFlow.Tests.Unit", "CashFlow.Tests\CashFlow.Tests.Unit.csproj", "{FF87DBDB-86F9-47AB-95D4-EA505EBED5B2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A7EEE93F-F0EE-4E40-9DBA-3B10ACDE757C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Tests.Shared", "CashFlow.Tests.Shared\CashFlow.Tests.Shared.csproj", "{C7667D54-DEE6-4883-841E-AF3B65C23705}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Tests.Shared", "CashFlow.Tests.Shared\CashFlow.Tests.Shared.csproj", "{E7B971A3-951D-44DC-8B97-42487A1B9FA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,17 +37,17 @@ Global
 		{FF87DBDB-86F9-47AB-95D4-EA505EBED5B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF87DBDB-86F9-47AB-95D4-EA505EBED5B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF87DBDB-86F9-47AB-95D4-EA505EBED5B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C7667D54-DEE6-4883-841E-AF3B65C23705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7667D54-DEE6-4883-841E-AF3B65C23705}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7667D54-DEE6-4883-841E-AF3B65C23705}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7667D54-DEE6-4883-841E-AF3B65C23705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7B971A3-951D-44DC-8B97-42487A1B9FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7B971A3-951D-44DC-8B97-42487A1B9FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7B971A3-951D-44DC-8B97-42487A1B9FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7B971A3-951D-44DC-8B97-42487A1B9FA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FF87DBDB-86F9-47AB-95D4-EA505EBED5B2} = {A7EEE93F-F0EE-4E40-9DBA-3B10ACDE757C}
-		{C7667D54-DEE6-4883-841E-AF3B65C23705} = {A7EEE93F-F0EE-4E40-9DBA-3B10ACDE757C}
+		{E7B971A3-951D-44DC-8B97-42487A1B9FA9} = {A7EEE93F-F0EE-4E40-9DBA-3B10ACDE757C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FB0E9D3C-D84C-45BC-B270-22A24155EE90}

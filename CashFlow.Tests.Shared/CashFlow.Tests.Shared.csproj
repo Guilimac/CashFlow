@@ -25,9 +25,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CashFlow.MemoryDb\CashFlow.MemoryDb.csproj" />
-    <ProjectReference Include="..\CashFlow.Services\CashFlow.Services.csproj" />
-    <ProjectReference Include="..\CashFlow.Tests.Shared\CashFlow.Tests.Shared.csproj" />
-    <ProjectReference Include="..\CashFlow\CashFlow.csproj" />
   </ItemGroup>
 
 </Project>
